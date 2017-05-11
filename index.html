@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>Word Search Engine By Parth</title>
+</head>
+
+<body style = "border: 1px solid; padding: 10px;"> 
+
+	<div ng-app="">
+
+		<form ng-submit="search_word" action = "Configuration.jsp">
+			<input id = "input" type = "text" ng-model = "name" name = "word" placeholder = "Type Keyword Here">
+			<input type = "submit" value = "Search" name = "search">
+		</form>
+	
+		<p id="result" style = "border: 1px solid;">Searched Keyword Name: Searched Count Number<br/>
+		Ex: Ram: 4</p>
+
+	</div>
+
+	<script>
+	$('#input').keyup(function(){
+		if($(this).val() == '') {
+			$('#result').html('Searched Keyword Name: Searched Count Number<br/>Ex: Ram: 4');
+		} else {
+			$.ajax({
+				url: 'Configuration.jsp?startwith=' + $(this).val(),
+				success: function(data) {
+					$('#result').html(data);
+				}
+			});		
+		}
+	});
+	</script>
+</body>
+
+</html>
