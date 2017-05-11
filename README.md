@@ -25,7 +25,7 @@ when keyword is pressing then at same time JSP code receives the typed keyword a
 * **Partha Sarathi Ray** - [Word-Search-Engine](https://github.com/Word-Search-Engine)
 
 ### Demo
-* A live demonstration is available at this URL: http://partharay.tk/
+* A live demonstration is available at this URL: http://www.partharay.tk/
 
 
 
